@@ -9,11 +9,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Конфигурация для GitHub Pages
+  // Конфигурация для статического экспорта
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/umbrella-corp' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/umbrella-corp/' : '',
+  // Убираем basePath для GitHub Pages - он будет автоматически настроен
+  // basePath: process.env.NODE_ENV === 'production' ? '/umbrella-corp' : '',
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/umbrella-corp/' : '',
 }
 
 export default nextConfig
